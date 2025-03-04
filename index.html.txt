@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zayd Aviator Predictor Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Step 0: Start Button -->
+        <div class="step step-0">
+            <h1>Welcome to Zayd Aviator Predictor Bot</h1>
+            <button class="start-btn" onclick="startApp()">Start</button>
+        </div>
+
+        <!-- Step 1: Language & Country Selection -->
+        <div class="step step-1" style="display: none;">
+            <h2>Step 1: Select Language & Country</h2>
+            <p class="warning">The software maximum usage is 10 hours per day.</p>
+            
+            <!-- Language selection -->
+            <label for="language">Select Language:</label>
+            <select id="language">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+                <option value="italian">Italian</option>
+                <option value="portuguese">Portuguese</option>
+                <option value="arabic">Arabic</option>
+                <option value="chinese">Chinese</option>
+            </select>
+
+            <!-- Country selection -->
+            <label for="country">Select Country:</label>
+            <select id="country">
+                <option value="Zimbabwe">Zimbabwe</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Somalia">Somalia</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Mozambique">Mozambique</option>
+                <!-- Add all other countries here -->
+            </select>
+
+            <button class="continue" onclick="nextStep(2)">Continue</button>
+        </div>
+
+        <!-- Step 2: Betting Site Selection -->
+        <div class="step step-2" style="display: none;">
+            <h2>Step 2: Select Your Betting Site</h2>
+            <div class="betting-sites">
+                <div class="site" onclick="bettingSiteSelected('WorldStar Bet')">➡️ WorldStar Bet</div>
+                <div class="site" onclick="bettingSiteSelected('BetWay')">➡️ BetWay</div>
+                <div class="site" onclick="bettingSiteSelected('MwosBet')">➡️ MwosBet</div>
+                <div class="site" onclick="bettingSiteSelected('Betika')">➡️ Betika</div>
+                <div class="site" onclick="bettingSiteSelected('BetPawa')">➡️ BetPawa</div>
+                <div class="site" onclick="bettingSiteSelected('SpinCity')">➡️ SpinCity</div>
+                <div class="site" onclick="bettingSiteSelected('1WinBet')">➡️ 1WinBet</div>
+                <div class="site" onclick="bettingSiteSelected('1xBet')">➡️ 1xBet</div>
+                <div class="site" onclick="bettingSiteSelected('M-Sport')">➡️ M-Sport</div>
+                <div class="site" onclick="bettingSiteSelected('MeridianBet')">➡️ MeridianBet</div>
+                <div class="site" onclick="bettingSiteSelected('Bet7k Live Casino')">➡️ Bet7k Live Casino</div>
+                <div class="site" onclick="bettingSiteSelected('B9. Game')">➡️ B9. Game</div>
+                <div class="site" onclick="bettingSiteSelected('HollyWood Bet')">➡️ HollyWood Bet</div>
+                <div class="site" onclick="bettingSiteSelected('SportyBet')">➡️ SportyBet</div>
+                <div class="site" onclick="bettingSiteSelected('MelBet')">➡️ MelBet</div>
+                <div class="site" onclick="bettingSiteSelected('AfricaBet')">➡️ AfricaBet</div>
+                <div class="site" onclick="bettingSiteSelected('KiraBet')">➡️ KiraBet</div>
+                <div class="site" onclick="bettingSiteSelected('Babu88 Casino')">➡️ Babu88 Casino</div>
+                <div class="site" onclick="bettingSiteSelected('Europa Casino')">➡️ Europa Casino</div>
+                <div class="site" onclick="bettingSiteSelected('LuckyJet(ex)')">➡️ LuckyJet(ex)</div>
+            </div>
+            <button class="continue" onclick="nextStep(3)">Continue</button>
+        </div>
+
+        <!-- Step 3: Enter Betting Site ID -->
+        <div class="step step-3" style="display: none;">
+            <h2>Step 3: Enter Your Betting Site ID</h2>
+            <input type="text" id="site-id" placeholder="Enter your site ID">
+            <button class="continue" onclick="nextStep(4)">Continue</button>
+        </div>
+
+        <!-- Step 4: Enter Activation Code -->
+        <div class="step step-4" style="display: none;">
+            <h2>Step 4: Enter Activation Code</h2>
+            <input type="text" id="activation-code" placeholder="Enter your activation code (e.g., ABC123)">
+            <button class="continue" onclick="validateActivationCode()">Continue</button>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" style="display: none;">
+            <p>ACTIVATION CODE INVALID</p>
+            <p>KINDLY CONTACT ADMIN TO GET YOUR CODE</p>
+            <a href="https://t.me/zayd0011" target="_blank">Support</a>
+        </div>
+
+        <!-- Reset Button -->
+        <button class="reset-btn" onclick="resetApp()" style="display: none;">Reset App</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
