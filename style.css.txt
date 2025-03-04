@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.step {
+    display: none;
+}
+
+.step-0 {
+    display: block;
+}
+
+h1 {
+    font-size: 30px;
+    color: #333;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.warning {
+    color: red;
+}
+
+button, .site, .continue, .start-btn {
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.site {
+    padding: 10px;
+    margin: 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.site:hover {
+    background-color: #ddd;
+}
+
+input {
+    padding: 10px;
+    width: 80%;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.error-message {
+    display: none;
+    background-color: #f8d7da;
+    padding: 15px;
+    color: #721c24;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.reset-btn {
+    display: block;
+    background-color: #28a745;
+    margin-top: 30px;
+    font-size: 18px;
+}
