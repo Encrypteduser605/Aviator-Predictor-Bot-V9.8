@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+select, input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.continue-btn {
+    background-color: #007bff;
+    font-size: 20px;
+}
+
+.continue-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Step 2: Betting Site Selection */
+.betting-sites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.site {
+    padding: 15px 25px;
+    font-size: 18px;
+    background-color: #ff5733;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+}
+
+.site:hover {
+    background-color: #c13b21;
+}
+
+/* Error Message */
+#error-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: red;
+}
+
+/* Support Button */
+.support-btn {
+    margin-top: 20px;
+    background-color: #28a745;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.support-btn:hover {
+    background-color: #218838;
+}
