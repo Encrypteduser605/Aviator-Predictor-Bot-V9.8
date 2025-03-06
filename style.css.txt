@@ -1,0 +1,108 @@
+/* General body styles */
+body.spider-background {
+    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Container for centering content */
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Button styles */
+.start-btn,
+.continue-btn,
+.support-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover,
+.continue-btn:hover,
+.support-btn:hover {
+    background-color: #45a049;
+}
+
+.start-btn:active,
+.continue-btn:active,
+.support-btn:active {
+    background-color: #3e8e41;
+}
+
+/* Betting Site Selection */
+.betting-sites {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.site {
+    padding: 10px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.site:hover {
+    background-color: #45a049;
+}
+
+.site:active {
+    background-color: #3e8e41;
+}
+
+/* Input field styles */
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #f4f4f4;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #45a049;
+}
+
+/* Error message styling */
+#error-message {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Spinner or loading animation (optional) */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
