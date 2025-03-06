@@ -1,0 +1,107 @@
+/* Global styles */
+body {
+    background: url('https://www.example.com/spider-web-background.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    z-index: 2;
+}
+
+/* Button styles */
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Footballer images container */
+.footballers {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.player img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Currency display */
+.currencies {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.currency {
+    display: inline-block;
+    margin: 10px;
+    font-size: 18px;
+}
+
+/* Warning sticker styles */
+.warning-sticker {
+    background-color: #FF3B30;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    margin-top: 10px;
+}
+
+/* Language selector styles */
+.language-selector {
+    margin-top: 20px;
+}
+
+.language-selector select {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Visibility for error messages */
+#error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Container styles for inputs */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 80%;
+    margin: 10px 0;
+}
+
+/* Style for containers with sticky footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
