@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zayd Aviator Predictor Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Welcome Screen -->
+    <div id="startSection" class="container">
+        <button id="startButton" class="start-btn">START</button>
+    </div>
+
+    <!-- Welcome and warning -->
+    <div id="welcomeSection" class="container" style="display: none;">
+        <h1>Welcome to Zayd Aviator Predictor Bot</h1>
+        <p style="color: red; font-size: 20px;">WARNING: Software maximum usage is 10 hours per day</p>
+        <button id="continueButton" class="continue-btn">Continue</button>
+    </div>
+
+    <!-- Language and Country Selection -->
+    <div id="selectionSection" class="container" style="display: none;">
+        <h2>Select Language and Country</h2>
+        <select id="languageSelect">
+            <option value="English">English</option>
+            <option value="Arabic">Arabic</option>
+            <option value="French">French</option>
+            <option value="Portuguese">Portuguese</option>
+        </select>
+        <select id="countrySelect">
+            <option value="">Select Country</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Somalia">Somalia</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Mozambique">Mozambique</option>
+            <option value="Algeria">Algeria</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Saudi Arabia">Saudi Arabia</option>
+            <option value="United Arab Emirates">United Arab Emirates</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Lebanon">Lebanon</option>
+            <option value="Brazil">Brazil</option> <!-- Added Brazil -->
+        </select>
+        <button class="continue-btn" onclick="goToBettingSiteSelection()">Continue</button>
+    </div>
+
+    <!-- Betting Site Selection -->
+    <div id="bettingSiteSelection" class="container" style="display: none;">
+        <h2>Select Your Betting Site</h2>
+        <div class="betting-sites">
+            <div class="site" onclick="bettingSiteSelected('WorldStar Bet')">➡️ WorldStar Bet</div>
+            <div class="site" onclick="bettingSiteSelected('BetWay')">➡️ BetWay</div>
+            <div class="site" onclick="bettingSiteSelected('MwosBet')">➡️ MwosBet</div>
+            <div class="site" onclick="bettingSiteSelected('Betika')">➡️ Betika</div>
+            <div class="site" onclick="bettingSiteSelected('BetPawa')">➡️ BetPawa</div>
+            <div class="site" onclick="bettingSiteSelected('SpinCity')">➡️ SpinCity</div>
+            <div class="site" onclick="bettingSiteSelected('1WinBet')">➡️ 1WinBet</div>
+            <div class="site" onclick="bettingSiteSelected('1xBet')">➡️ 1xBet</div>
+            <div class="site" onclick="bettingSiteSelected('M-Sport')">➡️ M-Sport</div>
+            <div class="site" onclick="bettingSiteSelected('MeridianBet')">➡️ MeridianBet</div>
+            <div class="site" onclick="bettingSiteSelected('Bet7k Live Casino')">➡️ Bet7k Live Casino</div>
+            <div class="site" onclick="bettingSiteSelected('B9. Game')">➡️ B9. Game</div>
+            <div class="site" onclick="bettingSiteSelected('HollyWood Bet')">➡️ HollyWood Bet</div>
+            <div class="site" onclick="bettingSiteSelected('SportyBet')">➡️ SportyBet</div>
+            <div class="site" onclick="bettingSiteSelected('MelBet')">➡️ MelBet</div>
+            <div class="site" onclick="bettingSiteSelected('AfricaBet')">➡️ AfricaBet</div>
+            <div class="site" onclick="bettingSiteSelected('KiraBet')">➡️ KiraBet</div>
+            <div class="site" onclick="bettingSiteSelected('Babu88 Casino')">➡️ Babu88 Casino</div>
+            <div class="site" onclick="bettingSiteSelected('Europa Casino')">➡️ Europa Casino</div>
+            <div class="site" onclick="bettingSiteSelected('LuckyJet(ex)')">➡️ LuckyJet(ex)</div>
+            <div class="site" onclick="bettingSiteSelected('Waliya Sports Betting')">➡️ Waliya Sports Betting</div> <!-- Added Waliya Sports Betting -->
+        </div>
+        <button class="continue-btn" onclick="goToBettingSiteID()">Continue</button>
+    </div>
+
+    <!-- Betting Site ID -->
+    <div id="bettingSiteID" class="container" style="display: none;">
+        <h2>Enter Your Betting Site ID</h2>
+        <input type="text" id="bettingSiteIDInput" placeholder="Enter Betting Site ID">
+        <button class="continue-btn" onclick="goToActivationCode()">Continue</button>
+    </div>
+
+    <!-- Activation Code Entry -->
+<div id="activationCodeSection" class="container" style="display: none;">
+    <h2>Enter Your Activation Code</h2>
+    <input type="text" id="activationCode" placeholder="Enter activation code (e.g., GXW764)">
+    <button class="continue-btn" onclick="validateActivationCode()">Continue</button>
+    <div id="error-message" style="display: none; color: red;">ACTIVATION CODE INVALID. Kindly contact admin to get your code.</div>
+    <button class="support-btn" onclick="window.location.href='https://t.me/zayd0011'">Support</button>
+</div>
+
+    <!-- Spider Web (Loading Animation) -->
+    <div id="spiderWeb" class="container" style="display: none;">
+        <div class="spider-animation">
+            <img src="https://media.giphy.com/media/1zdxz0gxjxhWmcw5tI/giphy.gif" alt="Spider Web" />
+        </div>
+    </div>
+
+    <!-- Get Signal Button Section -->
+    <div id="getSignalSection" class="container" style="display: none;">
+        <button id="getSignalButton" class="continue-btn" onclick="getSignal()">GET SIGNAL 🚀</button>
+    </div>
+
+    <!-- Error Section -->
+    <div id="errorSection" class="container" style="display: none;">
+        <h2>Error</h2>
+        <p style="color: red;">You took too long to enter the details. Please troubleshoot your network. The system has detected proxies or VPN caches and cookies in your device.</p>
+        <button class="continue-btn" onclick="restartApp()">Restart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
